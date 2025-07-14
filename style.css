@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: whitesmoke;
+}
+
+form{
+    height: 90%;
+    width: 30%;
+    padding: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+hr{
+    width: 90%;
+}
+
+.username{
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    padding: 5px;
+}
+
+input:not(input[name='fname']):not(input[name='lname']){
+    width: 100%;
+}
+
+button{
+    padding: 10px;
+    color: white;
+    border: none;
+    background-color: #242424;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+}
+p{
+    align-self: center;
+}
+
+.login{
+    height: 60%;
+}
+
+.error_message{
+    display: none;
+    background-color: rgb(255, 149, 149);
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px red;
+    text-align: center;
+}
+
+.form_element{
+    position: relative;
+
+}
+.eye{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 50%;
+    cursor: pointer;
+
+}
+
+.users{
+    
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 3px 5px 30px black;
+    max-height: 550px;
+    overflow-y: auto;
+
+    
+    
+}
+
+.profile_pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.user{
+    display: flex;
+    gap: 10px;
+}
+.hr{
+    align-self: center;
+    opacity: 0.5;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.search{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    gap: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.search_btn{
+    border-radius: 0px 5px 5px 0px;
+    background-color: gray;
+    padding: 5px;
+}
+
+.search input{
+    
+    opacity: 0;
+    
+    transition: all 0.3s ease;
+}
+
+
+
+.search h4{
+    display: block;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.search input.active{
+    opacity: 1;
+    transition: all 0.3s ease;
+    
+}
+
+
+.search h4.active{
+    display: none;
+   
+    
+}
+
+.message{
+    
+    margin-bottom: 20px;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+}
+
+.new_msg{
+    background-color: lime;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    align-self: flex-end;
+}
+
+.name p{
+    overflow-y: hidden;
+    
+}
+
+.offline{
+    background-color : gray;
+    border-radius: 50%;
+    width: 10px;
+    align-self: flex-end;
+    
+    height: 10px;
+}
+.status{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.chat{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    
+    box-shadow: 3px 5px 30px black;
+    height: 550px;
+    overflow: hidden;
+    
+
+}
+
+header{
+    height: 90px;
+    background-color: white;
+    display: flex;
+    padding:  10px;
+    gap: 15px;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+section{
+    flex: 1;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+    
+    
+
+}
+#sender{
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    align-self: flex-end;
+    padding: 10px;
+    max-width: 70%;
+    height: auto;
+    color: white;
+    background-color: #242424;
+    border-radius: 10px 10px 0 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#receiver{
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    color: black;
+    word-wrap: break-word;
+    gap: 15px;
+    
+    
+    
+
+}
+
+#receiver p {
+    background-color: white;
+padding: 10px;
+border-radius: 10px 10px 10px 0px;
+}
+
+#receiver img{
+    align-self: flex-end;
+}
+
+.typing{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 25px;
+    flex-shrink: 0;
+    bottom: 0;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    gap: 15px;
+}
+
+
+.typing input{
+    padding: 10px;
+
+}
+
+.send{
+    width: 100px;
+    background-color: whitesmoke;
+}
+
+.auser {
+  text-decoration: none;     /* removes underline */
+  color: black;              /* sets text color to black */
+  cursor: pointer;            /* makes the entire div clickable */
+}
+
+.auser h3,
+.auser p {
+  color: black!important;
+}
+
+h2{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
